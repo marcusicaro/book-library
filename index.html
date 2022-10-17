@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- <div class="book-container">
+        <input type="button" value="NEW BOOK">
+    </div> -->
+
+
+    <button class="open-button" onclick="openForm()">+</button>
+
+    <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+          <h1>Add a Book</h1>
+      
+          <label for="title"><b>Email</b></label>
+          <input type="text" placeholder="Enter title" name="title" required>
+      
+          <label for="author"><b>Password</b></label>
+          <input type="text" placeholder="Enter author" name="author" required>
+
+          <label for="pages"><b>Pages</b></label>
+          <input type="number" placeholder="Enter number of pages" name="pages" required>
+
+          <label for="read"><b>Read</b></label>
+
+          <div class="read">
+              <div class="yes">
+                  <label for="read"><b>Yes</b></label>
+                  <input type="radio" placeholder="Enter if read the book" name="read">
+              </div>
+
+    
+                  <div class="not-read">
+                      <label for="read"><b>No</b></label>
+                      <input type="radio" placeholder="Enter if read the book" name="read">
+                  </div>
+
+          </div>
+      
+          <button type="submit" class="btn">Add Book</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+      </div>
+
+     <!-- <div class="book-card">
+        <p>Title:</p>
+        <p>Author:</p>
+        <p>Page:</p>
+        <p>Read:</p>
+    </div>  -->
+    <script src="script.js"></script>
+</body>
+</html>
