@@ -53,20 +53,20 @@
     background: #f1f1f1;
   }
 
-  .form-container input[type=radio]{
-    margin: 0px 0px 0px 5px;
+  .form-container input[type=checkbox]{
+    margin: 0px 0px 22px 5px;
     vertical-align: baseline;
   }
 
  .read {
-    display: grid;
-    grid-auto-flow: column;
+    /* display: grid; */
+    /* grid-auto-flow: column; */
     /* width: 100%; */
     padding: 15px;
     margin: 5px 0 22px 0;
     border: none;
     background: #f1f1f1;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
   }
   
   
@@ -96,4 +96,11 @@
   /* Add some hover effects to buttons */
   .form-container .btn:hover, .open-button:hover {
     opacity: 1;
+  }
+
+  .fa {
+    
+    justify-self: end;
+    margin-right: auto;
+    margin-left: auto;
   }

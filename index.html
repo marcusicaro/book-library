@@ -7,45 +7,30 @@
     <title>Document</title>
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <!-- <div class="book-container">
-        <input type="button" value="NEW BOOK">
-    </div> -->
-
+    <script src="script.js"></script>
 
     <button class="open-button" onclick="openForm()">+</button>
 
     <div class="form-popup" id="myForm">
-        <form action="/action_page.php" class="form-container">
+        <form class="form-container">
           <h1>Add a Book</h1>
       
-          <label for="title"><b>Email</b></label>
-          <input type="text" placeholder="Enter title" name="title" required>
+          <label for="title"><b>Title</b></label>
+          <input type="text" placeholder="Enter title" name="title" id="title" required>
       
-          <label for="author"><b>Password</b></label>
-          <input type="text" placeholder="Enter author" name="author" required>
+          <label for="author"><b>Author</b></label>
+          <input type="text" placeholder="Enter author" name="author" id="author" required>
 
           <label for="pages"><b>Pages</b></label>
-          <input type="number" placeholder="Enter number of pages" name="pages" required>
+          <input type="number" placeholder="Enter number of pages" name="pages" id="pages" required>
 
           <label for="read"><b>Read</b></label>
-
-          <div class="read">
-              <div class="yes">
-                  <label for="read"><b>Yes</b></label>
-                  <input type="radio" placeholder="Enter if read the book" name="read">
-              </div>
-
-    
-                  <div class="not-read">
-                      <label for="read"><b>No</b></label>
-                      <input type="radio" placeholder="Enter if read the book" name="read">
-                  </div>
-
-          </div>
+          <input type="checkbox" placeholder="Enter if you've read the book" name="read" id="read">
       
-          <button type="submit" class="btn">Add Book</button>
+          <button type="button" class="btn" onclick="addBooktoLibrary()">Add Book</button>
           <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
         </form>
       </div>
@@ -55,7 +40,8 @@
         <p>Author:</p>
         <p>Page:</p>
         <p>Read:</p>
+        <i class="fa fa-trash" aria-hidden="true"></i>
     </div>  -->
-    <script src="script.js"></script>
+
 </body>
 </html>
