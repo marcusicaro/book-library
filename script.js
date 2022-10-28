@@ -4,7 +4,9 @@ var bookRead = '';
 
 let myLibrary = [];
 
-function ChangeReadStatus(read) {
+class ChangeReadStatus {
+
+    constructor (read) {
     // console.log(read.parentNode.querySelector('.book-card :nth-child(4)').textContent);
 
     if (read.parentNode.querySelector('.book-card :nth-child(4)').textContent == 'Read: No') {
@@ -14,6 +16,7 @@ function ChangeReadStatus(read) {
         read.parentNode.querySelector('.book-card :nth-child(4)').textContent = 'Read: No';
         // console.log('HUHEUHEUEHEU');
     }
+}
 }
 
 function remove(el) {
@@ -84,7 +87,7 @@ function addBooktoLibrary() {
     const changeRead = document.createElement('input');
     changeRead.setAttribute('type', 'button');
     changeRead.setAttribute('value', 'change read status');
-    changeRead.setAttribute('onclick','ChangeReadStatus(this)');
+    changeRead.setAttribute('onclick','new ChangeReadStatus(this)');
 
     card.appendChild(changeRead);
 
