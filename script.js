@@ -1,7 +1,19 @@
+const submit = document.getElementById('submit');
+const title = document.getElementById('title');
+const author = document.getElementById('author');
+const pages = document.getElementById('pages');
+
+// title.addEventListener('input', () => {
+//     if (title.validity.typeMismatch) {
+//         title.setCustomValidity('Title characters must be letters or numbers.');
+//         title.reportValidity();
+//     } else {
+//         title.setCustomValidity('');
+//     }
+// });
+
 var id = 0;
-
 var bookRead = '';
-
 let myLibrary = [];
 
 class ChangeReadStatus {
@@ -41,7 +53,16 @@ function readCheck () {
     }
 }
 
+
+
 function addBooktoLibrary() {
+    if(!title.checkValidity()) {
+        return alert('Title must be at least two characters long.')
+    } else if (!author.checkValidity()) {
+        return alert('Author name must be between 2-20 characters.')
+    } else if (!pages.checkValidity()){
+        return alert('Books must be at least one page long!')
+    } else {
 
     // find corresponding value from the user input 
     var bookTitle = document.getElementById('title').value;
@@ -97,15 +118,7 @@ function addBooktoLibrary() {
     
     id++;
 
-    // var bookDeleteExecution = document.getElementById(idTrash);
-    // bookDeleteExecution.onclick = clickDelete ();
-    // function clickDelete () {
-        // console.log(card);
-        // console.log(bookDeleteExecution)
-        // card.remove();
-    // }
-
-    // idTrash++;
+    }
     
 }
 
@@ -129,3 +142,6 @@ function openForm() {
   function closeForm() {
     document.getElementById("myForm").style.display = "none";
   }
+
+
+submit.addEventListener('click', () => addBooktoLibrary())

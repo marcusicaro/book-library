@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <script src="script.js"></script>
-
     <button class="open-button" onclick="openForm()">+</button>
 
     <div class="form-popup" id="myForm">
@@ -19,18 +17,18 @@
           <h1>Add a Book</h1>
       
           <label for="title"><b>Title</b></label>
-          <input type="text" placeholder="Enter title" name="title" id="title" required>
+          <input type="text" placeholder="Enter title" name="title" id="title" required pattern="[a-zA-Z0-9\s]{2,}">
       
           <label for="author"><b>Author</b></label>
-          <input type="text" placeholder="Enter author" name="author" id="author" required>
+          <input type="text" placeholder="Enter author" name="author" id="author" required minlength="2" maxlength="20" pattern="[A-Za-z]{2,}">
 
           <label for="pages"><b>Pages</b></label>
-          <input type="number" placeholder="Enter number of pages" name="pages" id="pages" required>
+          <input type="number" placeholder="Enter number of pages" name="pages" id="pages" minlength="1" required>
 
           <label for="read"><b>Read</b></label>
           <input type="checkbox" placeholder="Enter if you've read the book" name="read" id="read">
       
-          <button type="button" class="btn" onclick="addBooktoLibrary()">Add Book</button>
+          <button type="button" class="btn" id="submit">Add Book</button>
           <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
         </form>
       </div>
@@ -42,6 +40,6 @@
         <p>Read:</p>
         <i class="fa fa-trash" aria-hidden="true"></i>
     </div>  -->
-
+    <script src="script.js"></script>
 </body>
 </html>
